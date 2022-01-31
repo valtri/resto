@@ -5,9 +5,11 @@ volumes:
 networks:
   default:
     driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1442
   external:
     external: true
-    name: rnet 
+    name: rnet
 services:
   restodb:
     image: jjrom/resto-database:6.1.2
