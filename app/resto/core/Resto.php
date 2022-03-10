@@ -121,6 +121,7 @@ class Resto
         array('GET',    '/auth', true, 'AuthAPI::getToken'),                                                                                // Return a valid auth token
         array('GET',    '/auth/check/{token}', false, 'AuthAPI::checkToken'),                                                               // Check auth token validity
         array('DELETE', '/auth/revoke/{token}', true, 'AuthAPI::revokeToken'),                                                              // Revoke auth token
+        array('GET',    '/auth/activate/{token}', false, 'AuthAPI::activateUser'),                                                          // Activate owner of the token
         array('PUT',    '/auth/activate/{token}', false, 'AuthAPI::activateUser'),                                                          // Activate owner of the token
 
         // API for services
